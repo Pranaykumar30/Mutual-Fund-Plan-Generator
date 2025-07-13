@@ -1,0 +1,266 @@
+/* General Body and Typography */
+body {
+    font-family: 'Inter', sans-serif; /* Using Inter font as requested */
+    background-color: #f0f4f8; /* Light background for a clean look */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure footer stays at bottom */
+}
+
+/* Header Styling */
+header {
+    background-color: #003366; /* Deep blue for header */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em; /* Larger title */
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Main Content Area */
+main {
+    flex-grow: 1; /* Allows main content to expand */
+    max-width: 1200px; /* Increased max-width for more content space */
+    margin: 30px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+    gap: 30px; /* Space between sections */
+    justify-content: center;
+}
+
+/* Card Styling for Sections */
+.card {
+    background-color: #fff;
+    border-radius: 12px; /* Rounded corners for cards */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* More pronounced shadow */
+    padding: 30px;
+    flex: 1; /* Allows cards to grow and shrink */
+    min-width: 300px; /* Minimum width for cards */
+    max-width: 550px; /* Max width for individual cards */
+}
+
+/* Headings within sections */
+h2, h3 {
+    color: #003366;
+    border-bottom: 1px solid #e0e0e0; /* Lighter border */
+    padding-bottom: 10px;
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Plan Summary Section */
+.plan-summary {
+    flex: 1; /* Make it a flexible item */
+    min-width: 300px; /* Ensure it doesn't get too small */
+    max-width: 550px; /* Control its max width */
+}
+
+#plan-details-container {
+    background-color: #e6f0f9; /* Light blue background for details */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #cce0f0; /* Subtle border */
+    font-size: 0.95em;
+    line-height: 1.8;
+}
+
+#plan-details-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#plan-details-container li {
+    margin-bottom: 8px;
+    padding: 8px 0;
+    border-bottom: 1px dashed #d0dbe8; /* Dashed line for separation */
+}
+
+#plan-details-container li:last-child {
+    border-bottom: none;
+}
+
+/* Calculator Section */
+.calculator-section {
+    flex: 1; /* Make it a flexible item */
+    min-width: 300px; /* Ensure it doesn't get too small */
+    max-width: 550px; /* Control its max width */
+}
+
+.input-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-group label {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #003366;
+}
+
+input[type="number"] {
+    padding: 12px 15px;
+    width: 100%; /* Full width within its container */
+    max-width: 280px; /* Max width for input field */
+    border-radius: 8px; /* More rounded corners */
+    border: 1px solid #b0c4de; /* Softer border color */
+    font-size: 1.1em;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); /* Deeper inset shadow */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Focus ring */
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    background-color: #28a745; /* Green for action */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px; /* Rounded button */
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2); /* Green shadow */
+    margin-bottom: 15px; /* Space below the button */
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:active {
+    transform: translateY(0); /* Press effect */
+    box-shadow: 0 2px 5px rgba(40, 167, 69, 0.2);
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #dc3545; /* Red color for error messages */
+    font-size: 0.95em;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Results and Chart Area */
+#results {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+#roi-info {
+    text-align: center;
+    color: #0056b3;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+#futureValueChart {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 10px; /* Padding around the chart itself */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: auto; /* Pushes footer to the bottom */
+    font-size: 0.85em;
+    color: #666;
+    background-color: #e9ecef;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        margin: 15px auto;
+        padding: 15px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%; /* Full width on small screens */
+        margin-bottom: 20px; /* Space between stacked cards */
+        padding: 20px;
+    }
+
+    input[type="number"] {
+        max-width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px 10px;
+    }
+    header h1 {
+        font-size: 1.8em;
+    }
+    header p {
+        font-size: 0.9em;
+    }
+    .card {
+        padding: 15px;
+    }
+    h2, h3 {
+        font-size: 1.3em;
+    }
+    .input-group label {
+        font-size: 1em;
+    }
+    input[type="number"] {
+        font-size: 1em;
+        padding: 10px;
+    }
+    button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}

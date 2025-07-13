@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutual Fund Plan Calculator</title>
+    <!-- Include Plotly.js library for dynamic charting -->
+    <script src="https://cdn.jsdelivr.net/npm/plotly.js@latest/dist/plotly.min.js"></script>
+    <!-- Link to custom CSS for styling -->
+    <link rel="stylesheet" href="/static/styles.css">
+    <!-- Google Fonts for Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Mutual Fund Plan Generator</h1>
+        <p>Strategic mutual fund planning based on high ROI and low volatility analysis.</p>
+    </header>
+
+    <main>
+        <section class="plan-summary card" id="plan-summary-section" style="display: none;">
+            <h2>Analyzed Mutual Fund Portfolio</h2>
+            <p>Our strategy selects companies with a balance of strong returns and manageable risk, aiming for long-term stable growth.</p>
+            
+            <!-- Container for displaying selected companies and ratios loaded from the backend -->
+            <div id="plan-details-container">
+                <p>Loading portfolio analysis...</p>
+            </div>
+        </section>
+
+        <section class="calculator-section card">
+            <h2>Projected Investment Growth (SIP)</h2>
+            <p>Enter your desired monthly investment amount to see the expected future value based on our portfolio's historical performance.</p>
+            
+            <div class="input-group">
+                <label for="monthlyInvestment">Monthly Investment Amount (₹):</label>
+                <!-- Removed value="5000" -->
+                <input type="number" id="monthlyInvestment" min="1000" step="100" placeholder="e.g., 1000">
+            </div>
+            
+            <button onclick="calculateFutureValue()">Calculate Future Value</button>
+            <!-- New element for displaying validation errors -->
+            <p id="validationErrorMessage" class="error-message" style="display: none;"></p>
+            
+            <!-- Initially hide the results section -->
+            <div id="results" style="display: none;">
+                <h3 id="roi-info"></h3>
+                <!-- Container for the Plotly.js chart -->
+                <div id="futureValueChart" style="height: 450px;"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Disclaimer: Investment strategies are based on historical performance and are subject to market risks. Past performance is not indicative of future results.</p>
+    </footer>
+
+    <!-- Link to custom JavaScript for backend interaction and charting -->
+    <script src="/static/script.js"></script>
+</body>
+</html>
